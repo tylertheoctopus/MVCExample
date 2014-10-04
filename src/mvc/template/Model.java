@@ -37,8 +37,10 @@ public class Model implements MessageController {
   
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
-    int field = (int)((HashMap)messagePayload).get("field");
-    int direction = (int)((HashMap)messagePayload).get("direction");
+    MessagePayload payload = (MessagePayload)messagePayload;
+    int field = payload.getField();
+    int direction = payload.getDirection();
+    
     if (direction == Constants.UP) {
       if (field == 1) {
         setVariable1(getVariable1()+Constants.UP);

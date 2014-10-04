@@ -50,11 +50,9 @@ public class View extends javax.swing.JFrame implements MessageController {
    * @param direction this.UP (1) or this.DOWN (-1), constants defined above
    * @return the HashMap payload to be sent with the message
    */
-  private HashMap createPayload(int fieldNumber, int direction) {
-    HashMap<String, Integer> hm = new HashMap();
-    hm.put("field", fieldNumber);
-    hm.put("direction", direction);
-    return hm;
+  private MessagePayload createPayload(int fieldNumber, int direction) {
+    MessagePayload payload = new MessagePayload(fieldNumber, direction);
+    return payload;
   }
 
   /**
