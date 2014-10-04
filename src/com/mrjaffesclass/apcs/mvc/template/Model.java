@@ -1,4 +1,4 @@
-package mvc.template;
+package com.mrjaffesclass.apcs.mvc.template;
 
 import java.util.*;
 import com.mrjaffesclass.apcs.messages.*;

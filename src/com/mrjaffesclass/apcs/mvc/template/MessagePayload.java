@@ -1,4 +1,4 @@
-package mvc.template;
+package com.mrjaffesclass.apcs.mvc.template;
 
 /**
  * This is the message payload class.  Instantiate this class when sending
