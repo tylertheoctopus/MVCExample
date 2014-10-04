@@ -15,6 +15,4 @@ languages.
 
 It will be fun!!
 
-Version history
-|Date    				|Version    |Comments
-|2014-10-03     |1.0        |Written for APCS 2014-2015
+V1.0 2014-10-03 Written for APCS 2014-2015
