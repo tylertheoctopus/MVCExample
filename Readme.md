@@ -16,5 +16,5 @@ languages.
 It will be fun!!
 
 Version history
-Date            Version     Comments
-2014-10-03      1.0         Written for APCS 2014-2015
+|Date    				|Version    |Comments
+|2014-10-03     |1.0        |Written for APCS 2014-2015
