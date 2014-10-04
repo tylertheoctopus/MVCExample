@@ -12,7 +12,7 @@ import com.mrjaffesclass.apcs.messages.*;
  * @author Roger Jaffe
  * @version 1.0
  */
-public class Controller implements MessageController {
+public class Controller implements MessageMailbox {
 
   private final Messaging mvcMessaging;
 

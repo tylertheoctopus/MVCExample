@@ -8,7 +8,7 @@ import com.mrjaffesclass.apcs.messages.*;
  * @author Roger Jaffe
  * @version 1.0
  */
-public class Model implements MessageController {
+public class Model implements MessageMailbox {
 
   // Messaging system for the MVC
   private final Messaging mvcMessaging;

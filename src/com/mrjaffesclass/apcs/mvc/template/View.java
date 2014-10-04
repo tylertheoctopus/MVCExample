@@ -9,7 +9,7 @@ import com.mrjaffesclass.apcs.messages.*;
  * @version 1.0
  * 
  */
-public class View extends javax.swing.JFrame implements MessageController {
+public class View extends javax.swing.JFrame implements MessageMailbox {
 
   private final Messaging mvcMessaging;
   
