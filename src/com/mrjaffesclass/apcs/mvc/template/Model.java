@@ -37,6 +37,11 @@ public class Model implements MessageMailbox {
   
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
+    if (messagePayload != null) {
+      System.out.println("RCV (model): "+messageName+" | "+messagePayload.toString());
+    } else {
+      System.out.println("RCV (model): "+messageName+" | No data sent");
+    }
     MessagePayload payload = (MessagePayload)messagePayload;
     int field = payload.getField();
     int direction = payload.getDirection();

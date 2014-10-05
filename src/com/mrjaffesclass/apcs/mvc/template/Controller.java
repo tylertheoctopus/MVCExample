@@ -61,6 +61,11 @@ public class Controller implements MessageMailbox {
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
     // Only handle the changeValue1 and changeValue2 messages
+    if (messagePayload != null) {
+      System.out.println("RCV (controller): "+messageName+" | "+messagePayload.toString());
+    } else {
+      System.out.println("RCV (controller): "+messageName+" | No data sent");
+    }
     if (messageName.equals("view:changeButton")) {
       mvcMessaging.notify("controller:changeButton", messagePayload, true);          
     }

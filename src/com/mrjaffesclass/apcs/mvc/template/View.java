@@ -34,6 +34,11 @@ public class View extends javax.swing.JFrame implements MessageMailbox {
   
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
+    if (messagePayload != null) {
+      System.out.println("RCV (view): "+messageName+" | "+messagePayload.toString());
+    } else {
+      System.out.println("RCV (view): "+messageName+" | No data sent");
+    }
     if (messageName.equals("model:variable1Changed")) {
       jLabel8.setText(messagePayload.toString());
     } else {
@@ -42,10 +47,8 @@ public class View extends javax.swing.JFrame implements MessageMailbox {
   }
 
   /**
-   * Create a HashMap with the payload for the message sent to the controller
-   * A hash map is a way to store data by using a key/value pair.  For this example
-   * HashMap.get("field") will retrieve the data that's stored with the key value
-   * of "field".  It's a pretty cool way to store data!
+   * Instantiate an object with the field number that was clicked (1 or 2) and
+   * the direction that the number should go (up or down)
    * @param fieldNumber 1 or 2 for the field being modified
    * @param direction this.UP (1) or this.DOWN (-1), constants defined above
    * @return the HashMap payload to be sent with the message
