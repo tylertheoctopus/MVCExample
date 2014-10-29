@@ -1,6 +1,6 @@
 package com.mrjaffesclass.apcs.mvc.template;
 import java.util.*;
-import com.mrjaffesclass.apcs.messages.*;
+import com.mrjaffesclass.apcs.messenger.*;
 /**
  * MVC Template
  * This is a template of an MVC framework used by APCS for the 
@@ -9,15 +9,15 @@ import com.mrjaffesclass.apcs.messages.*;
  * @version 1.0
  * 
  */
-public class View extends javax.swing.JFrame implements MessageMailbox {
+public class View extends javax.swing.JFrame implements MessageHandler {
 
-  private final Messaging mvcMessaging;
+  private final Messenger mvcMessaging;
   
   /**
    * Creates a new view
    * @param messages mvcMessaging object
    */
-  public View(Messaging messages) {
+  public View(Messenger messages) {
     mvcMessaging = messages;   // Save the calling controller instance
     initComponents();           // Create and init the GUI components
   }

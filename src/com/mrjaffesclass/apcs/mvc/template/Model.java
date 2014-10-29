@@ -1,17 +1,16 @@
 package com.mrjaffesclass.apcs.mvc.template;
 
-import java.util.*;
-import com.mrjaffesclass.apcs.messages.*;
+import com.mrjaffesclass.apcs.messenger.*;
 
 /**
  * The model represents the data that the app uses.
  * @author Roger Jaffe
  * @version 1.0
  */
-public class Model implements MessageMailbox {
+public class Model implements MessageHandler {
 
   // Messaging system for the MVC
-  private final Messaging mvcMessaging;
+  private final Messenger mvcMessaging;
 
   // Model's data variables
   private int variable1;
@@ -22,7 +21,7 @@ public class Model implements MessageMailbox {
    * @param messages Messaging class instantiated by the Controller for 
    *   local messages between Model, View, and controller
    */
-  public Model(Messaging messages) {
+  public Model(Messenger messages) {
     mvcMessaging = messages;
   }
   

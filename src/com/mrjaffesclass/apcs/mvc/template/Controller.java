@@ -1,5 +1,5 @@
 package com.mrjaffesclass.apcs.mvc.template;
-import com.mrjaffesclass.apcs.messages.*;
+import com.mrjaffesclass.apcs.messenger.*;
 
 /**
  * 
@@ -12,9 +12,9 @@ import com.mrjaffesclass.apcs.messages.*;
  * @author Roger Jaffe
  * @version 1.0
  */
-public class Controller implements MessageMailbox {
+public class Controller implements MessageHandler {
 
-  private final Messaging mvcMessaging;
+  private final Messenger mvcMessaging;
 
   /**
    * Controller constructor The Controller is responsible for creating the View
@@ -34,7 +34,7 @@ public class Controller implements MessageMailbox {
    */
   public Controller() {
     // Create the local messaging class
-    mvcMessaging = new Messaging();
+    mvcMessaging = new Messenger();
 
     // Create the view and set it visible
     View view = new View(mvcMessaging);    // This creates our view
