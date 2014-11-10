@@ -67,10 +67,10 @@ public class View extends javax.swing.JFrame implements MessageHandler {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    jButton1 = new javax.swing.JButton();
+    clickMeButton = new javax.swing.JButton();
     jLabel1 = new javax.swing.JLabel();
     jToggleButton1 = new javax.swing.JToggleButton();
-    jButton2 = new javax.swing.JButton();
+    noClickMeButton = new javax.swing.JButton();
     textField = new javax.swing.JTextField();
     fillButton = new javax.swing.JButton();
     jLabel2 = new javax.swing.JLabel();
@@ -90,13 +90,13 @@ public class View extends javax.swing.JFrame implements MessageHandler {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jButton1.setBackground(new java.awt.Color(0, 0, 0));
-    jButton1.setText("Click me!");
-    jButton1.setToolTipText("Click me to see the View send a message to the Controller to let it know that the button was pushed");
-    jButton1.setActionCommand("button1Clicked");
-    jButton1.addActionListener(new java.awt.event.ActionListener() {
+    clickMeButton.setBackground(new java.awt.Color(0, 0, 0));
+    clickMeButton.setText("Click me!");
+    clickMeButton.setToolTipText("Click me to see the View send a message to the Controller to let it know that the button was pushed");
+    clickMeButton.setActionCommand("button1Clicked");
+    clickMeButton.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton1buttonClickActionPerformed(evt);
+        clickMeButtonbuttonClickActionPerformed(evt);
       }
     });
 
@@ -110,11 +110,11 @@ public class View extends javax.swing.JFrame implements MessageHandler {
       }
     });
 
-    jButton2.setText("No, click me!!");
-    jButton2.setActionCommand("noClickMeButton!");
-    jButton2.addActionListener(new java.awt.event.ActionListener() {
+    noClickMeButton.setText("No, click me!!");
+    noClickMeButton.setActionCommand("noClickMeButton!");
+    noClickMeButton.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jButton2buttonClickActionPerformed(evt);
+        noClickMeButtonbuttonClickActionPerformed(evt);
       }
     });
 
@@ -199,10 +199,10 @@ public class View extends javax.swing.JFrame implements MessageHandler {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(layout.createSequentialGroup()
-                .addComponent(jButton1)
+                .addComponent(clickMeButton)
                 .addGap(34, 34, 34))
               .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jButton2)
+                .addComponent(noClickMeButton)
                 .addComponent(jToggleButton1))))
           .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addGroup(layout.createSequentialGroup()
@@ -229,11 +229,11 @@ public class View extends javax.swing.JFrame implements MessageHandler {
       .addGroup(layout.createSequentialGroup()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-            .addComponent(jButton1)
+            .addComponent(clickMeButton)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jToggleButton1)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jButton2))
+            .addComponent(noClickMeButton))
           .addGroup(layout.createSequentialGroup()
             .addGap(7, 7, 7)
             .addComponent(jLabel1)
@@ -270,20 +270,20 @@ public class View extends javax.swing.JFrame implements MessageHandler {
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-  private void jButton1buttonClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1buttonClickActionPerformed
+  private void clickMeButtonbuttonClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clickMeButtonbuttonClickActionPerformed
     // Send a message to the controller!
     mvcMessaging.notify("view:buttonClick", null, true);
-  }//GEN-LAST:event_jButton1buttonClickActionPerformed
+  }//GEN-LAST:event_clickMeButtonbuttonClickActionPerformed
 
   private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
     // Send a message to the controller!
     mvcMessaging.notify("view:toggleButtonClick", null, true);
   }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-  private void jButton2buttonClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2buttonClickActionPerformed
+  private void noClickMeButtonbuttonClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noClickMeButtonbuttonClickActionPerformed
     // Send a message to the controller!
     mvcMessaging.notify("view:buttonClick", null, true);
-  }//GEN-LAST:event_jButton2buttonClickActionPerformed
+  }//GEN-LAST:event_noClickMeButtonbuttonClickActionPerformed
 
   private void fillButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fillButtonActionPerformed
     fillButton.setText(textField.getText());
@@ -318,11 +318,10 @@ public class View extends javax.swing.JFrame implements MessageHandler {
    */
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JButton clickMeButton;
   private javax.swing.JButton downButton1;
   private javax.swing.JButton downButton2;
   private javax.swing.JButton fillButton;
-  private javax.swing.JButton jButton1;
-  private javax.swing.JButton jButton2;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel10;
   private javax.swing.JLabel jLabel11;
@@ -335,6 +334,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
   private javax.swing.JLabel jLabel8;
   private javax.swing.JLabel jLabel9;
   private javax.swing.JToggleButton jToggleButton1;
+  private javax.swing.JButton noClickMeButton;
   private javax.swing.JTextField textField;
   private javax.swing.JButton upButton1;
   private javax.swing.JButton upButton2;
