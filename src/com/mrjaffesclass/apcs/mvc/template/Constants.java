@@ -7,8 +7,8 @@
 package com.mrjaffesclass.apcs.mvc.template;
 
 /**
- *
- * @author Roger
+ * @author Roger Jaffe
+ * @version 1.0
  */
 public class Constants {
     // Constants
