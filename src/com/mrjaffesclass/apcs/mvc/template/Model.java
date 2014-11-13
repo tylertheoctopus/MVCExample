@@ -47,15 +47,15 @@ public class Model implements MessageHandler {
     
     if (direction == Constants.UP) {
       if (field == 1) {
-        setVariable1(getVariable1()+Constants.UP);
+        setVariable1(getVariable1()+Constants.FIELD_1_INCREMENT);
       } else {
-        setVariable2(getVariable2()+Constants.UP);
+        setVariable2(getVariable2()+Constants.FIELD_2_INCREMENT);
       }
     } else {
       if (field == 1) {
-        setVariable1(getVariable1()+Constants.DOWN);
+        setVariable1(getVariable1()-Constants.FIELD_1_INCREMENT);
       } else {
-        setVariable2(getVariable2()+Constants.DOWN);
+        setVariable2(getVariable2()-Constants.FIELD_2_INCREMENT);
       }      
     }
   }
