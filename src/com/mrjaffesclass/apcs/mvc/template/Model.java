@@ -29,7 +29,7 @@ public class Model implements MessageHandler {
    * Initialize the model here and subscribe to any required messages
    */
   public void init() {
-    mvcMessaging.subscribe("controller:changeButton", this);
+    mvcMessaging.subscribe("view:changeButton", this);
     setVariable1(10);
     setVariable2(-10);
   }
@@ -37,9 +37,9 @@ public class Model implements MessageHandler {
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
     if (messagePayload != null) {
-      System.out.println("RCV (model): "+messageName+" | "+messagePayload.toString());
+      System.out.println("MSG: received by model: "+messageName+" | "+messagePayload.toString());
     } else {
-      System.out.println("RCV (model): "+messageName+" | No data sent");
+      System.out.println("MSG: received by model: "+messageName+" | No data sent");
     }
     MessagePayload payload = (MessagePayload)messagePayload;
     int field = payload.getField();
@@ -74,6 +74,9 @@ public class Model implements MessageHandler {
    */
   public void setVariable1(int v) {
     variable1 = v;
+    // When we set a new value to variable 1 we need to also send a
+    // message to let other modules know that the variable value
+    // was changed
     mvcMessaging.notify("model:variable1Changed", variable1, true);
   }
   
@@ -91,6 +94,9 @@ public class Model implements MessageHandler {
    */
   public void setVariable2(int v) {
     variable2 = v;
+    // When we set a new value to variable 2 we need to also send a
+    // message to let other modules know that the variable value
+    // was changed
     mvcMessaging.notify("model:variable2Changed", variable2, true);
   }
 

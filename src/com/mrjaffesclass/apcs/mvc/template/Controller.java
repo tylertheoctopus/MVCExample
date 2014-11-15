@@ -53,22 +53,20 @@ public class Controller implements MessageHandler {
    * "this" refers to this controller object.
    */
   public void init() {
-    mvcMessaging.subscribe("view:toggleButtonClick", this);
-    mvcMessaging.subscribe("view:buttonClick", this); 
-    mvcMessaging.subscribe("view:changeButton", this);
+    // This is where you would subscribe to any messages the controller
+    // would need to process
+    // A sample subscriber call would be like...
+    //mvcMessaging.subscribe("view:toggleButtonClick", this);
   }
 
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
-    // Only handle the changeValue1 and changeValue2 messages
     if (messagePayload != null) {
-      System.out.println("RCV (controller): "+messageName+" | "+messagePayload.toString());
+      System.out.println("MSG: received by controller: "+messageName+" | "+messagePayload.toString());
     } else {
-      System.out.println("RCV (controller): "+messageName+" | No data sent");
+      System.out.println("MSG: received by controller: "+messageName+" | No data sent");
     }
-    if (messageName.equals("view:changeButton")) {
-      mvcMessaging.notify("controller:changeButton", messagePayload, true);          
-    }
+    // This is where the controller would handle any messages
   }
 
   /**

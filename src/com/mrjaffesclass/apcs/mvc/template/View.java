@@ -1,5 +1,4 @@
 package com.mrjaffesclass.apcs.mvc.template;
-import java.util.*;
 import com.mrjaffesclass.apcs.messenger.*;
 /**
  * MVC Template
@@ -35,9 +34,9 @@ public class View extends javax.swing.JFrame implements MessageHandler {
   @Override
   public void messageHandler(String messageName, Object messagePayload) {
     if (messagePayload != null) {
-      System.out.println("RCV (view): "+messageName+" | "+messagePayload.toString());
+      System.out.println("MSG: received by view: "+messageName+" | "+messagePayload.toString());
     } else {
-      System.out.println("RCV (view): "+messageName+" | No data sent");
+      System.out.println("MSG: received by view: "+messageName+" | No data sent");
     }
     if (messageName.equals("model:variable1Changed")) {
       jLabel8.setText(messagePayload.toString());
@@ -151,7 +150,7 @@ public class View extends javax.swing.JFrame implements MessageHandler {
     upButton1.setText("Up");
     upButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        up1ButtonActionPerformed(evt);
+        upButton1ActionPerformed(evt);
       }
     });
 
@@ -293,10 +292,10 @@ public class View extends javax.swing.JFrame implements MessageHandler {
    * Handler for the up button for field 1
    * @param evt 
    */
-  private void up1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up1ButtonActionPerformed
+  private void upButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButton1ActionPerformed
     // Increment the 1st data field
     mvcMessaging.notify("view:changeButton", createPayload(1, Constants.UP), true);
-  }//GEN-LAST:event_up1ButtonActionPerformed
+  }//GEN-LAST:event_upButton1ActionPerformed
 
   private void upButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButton2ActionPerformed
     // Increment the 2nd data field
